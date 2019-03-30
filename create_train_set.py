@@ -212,10 +212,12 @@ for file in glob.glob("*.jpg"):
 
     cnts,p, hierarchy = cv2.findContours(final_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
 
-
-    cnt = p[0]
-    area = cv2.contourArea(cnt)
-    
+    try:
+        cnt = p[0]
+        area = cv2.contourArea(cnt)
+    except IndexError:
+        pass
+        
     
 
     for i in p:
