@@ -1,0 +1,2 @@
+accuracy:   79.69%
+This disease is Brown Spot
